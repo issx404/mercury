@@ -50,39 +50,63 @@ body a:hover {
   text-decoration: none;
 }
 
-aside nav {
+/* === Сайдбар === */
+.sidebar {
+  width: 250px;
+  min-height: 100vh;
+  background: var(--bg2);
+  padding: 2rem 1rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 280px;
-  height: 100vh;
-  background-color: var(--bg2);
-  border-radius: 4px;
+  align-items: flex-start;
+  position: sticky;
+  top: 0;
 }
 
-.nav_link {
-  color: var(--green);
-  text-decoration: none;
-  width: auto;
-  height: auto;
-  background-color: var(--bg1);
-  font-size: 2rem;
-  padding: 1rem;
-  border-radius: 16px;
-  margin-top: 1rem;
-}
-
-.nav_link:hover {
-  color: var(--green);
-  background-color: #2b3339;
-  text-decoration: none;
-}
-
-.nav__title {
-  display: block;
+/* === Заголовок === */
+.sidebar__title {
+  font-size: 1.4rem;
+  font-weight: 600;
   color: var(--fg);
-  margin-top: 1rem;
-  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid var(--green);
+  padding-left: 0.75rem;
+}
+
+/* === Список === */
+.sidebar__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+/* === Ссылки === */
+.sidebar__link {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--fg);
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+/* Ховер эффект */
+.sidebar__link:hover {
+  background: rgba(0, 255, 128, 0.1);
+  color: var(--green);
+  transform: translateX(4px);
+}
+
+/* Активный пункт */
+.sidebar__link.active {
+  background: var(--green);
+  color: #fff;
+  font-weight: 600;
 }
 
 header {
@@ -127,39 +151,29 @@ header .logo .logo__sub {
 /* ——— НАВИГАЦИЯ ——— */
 header .navigation_links {
   display: flex;
-  gap: 2vw;
+  gap: 20px;
 }
 
 header .navigation_links a {
   text-decoration: none;
-  color: var(--fg);
+  color: var(--fg, #000);
   font-weight: 500;
-  position: relative;
-  font-size: clamp(0.9rem, 1vw, 1.1rem);
-  transition: color 0.2s ease;
+  font-size: 1rem;
+  border-bottom: 2px solid transparent; /* изначально прозрачная линия */
+  transition: border-color 0.2s ease; /* плавное появление линии */
 }
 
-/* ——— ЭФФЕКТ ХОВЕРА ——— */
-header .navigation_links a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  width: 100%;
-  height: 2px;
-  background-color: var(--accent, var(--aqua));
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 0.25s ease;
-}
-
+/* ——— Ховер ——— */
 header .navigation_links a:hover {
-  color: var(--accent, var(--blue));
+  color: var(--green);
+  border-bottom-color: var(--blue); /* подчеркивание на hover */
 }
 
-header .navigation_links a:hover::after {
-  transform: scaleX(1);
-  transform-origin: left;
+.active_link {
+  background-color: var(--bg3);
+  border-radius: 4px;
+  padding-left: 3px;
+  padding-right: 3px;
 }
 
 /* ——— АДАПТИВ ——— */
@@ -176,6 +190,42 @@ header .navigation_links a:hover::after {
     gap: 1rem;
     padding: 0.5rem 0;
   }
+}
+
+/* ——— МОДАЛЬНОЕ ОКНО ——— */
+.modal {
+  /* display: flex; */
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal_content {
+  background: #fff;
+  color: #222;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.close_btn {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #555;
+}
+
+.close_btn:hover {
+  color: #000;
 }
 
 footer {
@@ -252,6 +302,10 @@ main {
   hyphens: auto; /* разрешает переносы слов */
 }
 
+.article strong {
+  color: var(--purple);
+}
+
 .figure_video {
   display: flex;
   border-radius: 4px;
@@ -271,6 +325,7 @@ figcaption {
   font-size: 0.9rem;
   align-self: center;
   margin-top: 1vh;
+  margin-bottom: 1vh;
 }
 
 .admonition {
@@ -365,20 +420,4 @@ figcaption {
   width: 64px;
   height: 64px;
   color: #fff;
-}
-
-/* ——— УБРАТЬ СИНИЙ ФЛЭШ НА ССЫЛКАХ ——— */
-a {
-  -webkit-tap-highlight-color: transparent; /* убирает подсветку при тапе (мобильные) */
-  -webkit-focus-ring-color: transparent; /* убирает синюю рамку на Safari/Chrome */
-  outline: none;
-  color: inherit;
-}
-
-a:focus,
-a:active,
-a:visited {
-  color: inherit;
-  outline: none;
-  background: none;
 }

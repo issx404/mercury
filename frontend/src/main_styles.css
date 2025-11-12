@@ -86,39 +86,29 @@ header .logo .logo__sub {
 /* ——— НАВИГАЦИЯ ——— */
 header .navigation_links {
   display: flex;
-  gap: 2vw;
+  gap: 20px;
 }
 
 header .navigation_links a {
   text-decoration: none;
-  color: var(--fg);
+  color: var(--fg, #000);
   font-weight: 500;
-  position: relative;
-  font-size: clamp(0.9rem, 1vw, 1.1rem);
-  transition: color 0.2s ease;
+  font-size: 1rem;
+  border-bottom: 2px solid transparent; /* изначально прозрачная линия */
+  transition: border-color 0.2s ease; /* плавное появление линии */
 }
 
-/* ——— ЭФФЕКТ ХОВЕРА ——— */
-header .navigation_links a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  width: 100%;
-  height: 2px;
-  background-color: var(--accent, var(--aqua));
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 0.25s ease;
-}
-
+/* ——— Ховер ——— */
 header .navigation_links a:hover {
-  color: var(--accent, var(--blue));
+  color: var(--green);
+  border-bottom-color: var(--blue); /* подчеркивание на hover */
 }
 
-header .navigation_links a:hover::after {
-  transform: scaleX(1);
-  transform-origin: left;
+.active_link {
+  background-color: var(--bg3);
+  border-radius: 4px;
+  padding-left: 3px;
+  padding-right: 3px;
 }
 
 /* ——— АДАПТИВ ——— */
@@ -135,6 +125,42 @@ header .navigation_links a:hover::after {
     gap: 1rem;
     padding: 0.5rem 0;
   }
+}
+
+/* ——— МОДАЛЬНОЕ ОКНО ——— */
+.modal {
+  /* display: flex; */
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal_content {
+  background: #fff;
+  color: #222;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.close_btn {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #555;
+}
+
+.close_btn:hover {
+  color: #000;
 }
 
 footer {
@@ -172,6 +198,7 @@ footer {
   justify-content: flex-start;
   gap: 1vw;
   padding: 1vw;
+  /* height: 100vh; */
 }
 
 main {
@@ -201,10 +228,9 @@ main {
 }
 
 .article img {
-  width: 50%;
-  height: 60%;
+  max-width: 50%;
+  max-height: 60%;
   align-self: center;
-  border: 2px solid var(--green);
   border-radius: 4px;
 }
 

@@ -14,47 +14,94 @@
       <div class="logo"><a href="/">mercury<span class="logo__sub">/Меркурий</span></a></div>
 
   <nav class="navigation_links">
-    <a href="/">Главная</a>
+    <a id="link_main" href="/">Главная</a>
     <a href="/esed/">ЕСЭД</a>
-    <a href="#services">Безопасность</a>
-    <a href="#projects">Реквизиты</a>
-    <a href="#contacts">Контакты</a>
+  <a id="link_requisits" href="#">Реквизиты</a>
   </nav>
     </header>
 
+    <!-- Модальное окно -->
+    <div id="requisits_modal" class="modal">
+      <div class="modal_content">
+        <span id="close_modal" class="close_btn">&times;</span>
+        <h2>Реквизиты организации</h2>
+        <p>Государственное бюджетное учреждение Республики Саха (Якутия) «Станция скорой медицинской помощи»</p>
+<p>Сокращ. наименование ГБУ РС (Я) «ССМП»</p>
+<p>677005, г. Якутск, ул. П.Алексеева, 64/1</p>
+<p>Тел. гл. врач 326259 гл. бух. 326317 нач. АХО 326351</p>
+
+
+        <p>Министерство финансов РС(Я) (ГБУ РС(Я) «ССМП»)</p>
+        <p>ИНН/КПП 1435064435/143501001</p>
+        <p>Р/счет. № 03224643980000001601</p>
+        <p>Банк: ОКЦ № 6 ДГУ БАНКА РОССИИ// УФК по Республике Саха (Якутия), г Якутск</p>
+        <p>БИК 019805001</p>
+        <p>Кор/счет банка №40102810345370000085</p>
+        <p>лиц/счета 22054035020, 20054035020, 21054035020</p>
+        <p>И.о. главного врача- Иванова Альбина Аммосовна
+на основании Устава</p>
+<p>ОГРН 1021401050054, ОКТМО 98701000</p>
+      </div>
+    </div>
+
     <div class="container">
-      <aside>
-        <nav>
-          <span class="nav__title">Содержание</span>
-          <a class="nav_link" href="#">asdasd</a>
-          <a class="nav_link" href="#">asdasd</a>
-          <a class="nav_link" href="#trash">1asdasd</a>
-          <a class="nav_link" href="#">asdasd</a>
-          <a class="nav_link" href="#">asdasd</a>
+      <aside class="sidebar">
+        <nav class="sidebar__nav">
+          <h3 class="sidebar__title">Как отчитаться</h3>
+          <ul class="sidebar__list">
+            <li><a class="sidebar__link" href="#step1">Открыть поручение</a></li>
+            <li><a class="sidebar__link" href="#step2">Знакомство с поручением</a></li>
+            <li><a class="sidebar__link" href="#step3">Подготовка отчета</a></li>
+            <li><a class="sidebar__link" href="#step4">Создание связки</a></li>
+            <li><a class="sidebar__link" href="#step5">Заполнение документа</a></li>
+            <li><a class="sidebar__link" href="#step6">Отслеживание статуса</a></li>
+            <li><a class="sidebar__link" href="#step7">Отправка секретарю</a></li>
+          </ul>
+          <h3 class="sidebar__title">Как отправить письмо</h3>
+            <ul class="sidebar__list">
+            <li><a class="sidebar__link" href="#side_step1">Регистрируем новый проект документа</a></li>
+            <li><a class="sidebar__link" href="#side_step2">Дальнейшие шаги</a></li>
+          </ul>
         </nav>
       </aside>
+
       <main>
         <div class="main__container">
           <div class="article">
-            <h2>Как же организовать проект</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
-              non ab quasi numquam cumque. Esse eos deleniti quasi quaerat vero
-              incidunt magni quas vitae? Molestias laudantium tenetur voluptates
-              quis pariatur.
-            </p>
+            <h2>Основная информация</h3>
+            <p>- Все регламенты лежат в Cатурне по пути: <strong>saturn/ЕСЭД/РЕГЛАМЕНТЫ</strong></p>
+            <p>- Оператором системы ЕСЭД является ГБУ РС (Я) "РЦИТ": <strong>тел. 39-80-00</strong></p>
 
-            <figcaption>Демонстрация работы интерфейса</figcaption>
+            <figcaption>ЕСЭД - обеспечивает электронный документооборот</figcaption>
+          </div>
+
+          <!-- как войти в ЕСЭД -->
+            <div class="article">
+            <h2>Вход в систему</h3>
+            <p>Чтобы войти в систему необходимо перейти по ссылке <a href="https://esed.sakha.gov.ru" target="_blank">esed.sakha.gov.ru</a></p>
+            <div class="image">
+              <img
+                id="image_id"
+                class="image_src"
+                src="/images/login.png"
+                alt="Общий вид проекта"
+              />
+              <figcaption>Вход в систему ЕСЭД</figcaption>
+            </div>
+
+          </div> <!-- как войти в ЕСЭД конец-->
+
+          <div class="article">
+            <h2>Отчет</h3>
+            <p>Практически все поручения к нам поступают от Минздрава РС (Я) и у органа власти есть свои требования и регламенты на поступающие отчеты от подведомственных органов коим является и наша организация.</p>
+
+            <figcaption>Далее снизу идет пошаговое объяснение как отчитываться по поступающему поручению</figcaption>
           </div>
 
           <div class="article">
-            <h3>Шаг 1. Регистрирование проекта</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
-              non ab quasi numquam cumque. Esse eos deleniti quasi quaerat vero
-              incidunt magni quas vitae? Molestias laudantium tenetur voluptates
-              quis pariatur.
-            </p>
+            <h3 id="step1">Шаг 1. Открыть само поручение</h3>
+            <p>Для начала нам нужно найти само поручение, которое нам отписали (Секретарь и Главный врач). Все отписанные поручения у нас находятся в блоке <strong>"Документы на исполнении"</strong></p>
+            <p>Откройте своё поручение в соответствии с видео ниже</p>
             <div class="figure_video">
               <video
                 id="video_player"
@@ -65,22 +112,18 @@
                 playsinline
                 width="940"
               >
-                <source src="/images/default_first_2.mp4" type="video/mp4" />
+                <source src="/images/step1.mp4" type="video/mp4" />
                 Ваш браузер не поддерживает видео.
               </video>
             </div>
 
-            <figcaption>Демонстрация работы интерфейса</figcaption>
+            <figcaption>Открытие проекта поручения</figcaption>
           </div>
 
           <div class="article">
-            <h3>Шаг 1. Регистрирование проекта</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
-              non ab quasi numquam cumque. Esse eos deleniti quasi quaerat vero
-              incidunt magni quas vitae? Molestias laudantium tenetur voluptates
-              quis pariatur.
-            </p>
+            <h3 id="step2">Шаг 2. Знакомство с поручением</h3>
+            <p>В открывшемся окне поручения - Необходимо понять что от Вас требуется в поручении. Для этого внимательно ознакомьтесь с содержанием поручения. Каждое поручение имеет сопровдительно письмо + приложения (необязательно).</p>
+            <p>Всё внимательно проверьте!</p>
             <div class="figure_video">
               <video
                 id="video_player"
@@ -91,56 +134,193 @@
                 playsinline
                 width="940"
               >
-                <source src="/images/default_first_2.mp4" type="video/mp4" />
+                <source src="/images/step2.mp4" type="video/mp4" />
                 Ваш браузер не поддерживает видео.
               </video>
             </div>
 
-            <figcaption>Демонстрация работы интерфейса</figcaption>
+            <figcaption>Окно проекта поручения</figcaption>
           </div>
+          <div class="admonition warn">
+            <div class="admonition-title">Пометка</div>
+            <p>Резолюция - отписанное поручение</p>
+          </div>
+
+          <div class="article">
+            <h3 id="step3">Шаг 3. Подготовка нашего отчета</h3>
+            <p>После ознакомления с поручением, Нам необходимо подготовить ответ (отчет), который будет связан с проектом поручения</p>
+            <p>Отчет обязательно должен состоять из <strong>сопроводительного письма</strong> и приложений (если это необходимо)</p>
+            <p>Сопроводительное письмо, в свою очередь, должна быть выполнена на электронном бланке в Microsoft Word! Шаблон которого вы можете найти в сатурне по пути: <strong>saturn/ЕСЭД/ЭЛЕКТРОННЫЙ БЛАНК.docx</strong> Рекомендуется скопировать из сатурна себе в компьютер этот бланк. </p>
+            <div class="image">
+              <img
+                id="image_id"
+                class="image_src"
+                src="/images/путь электронного бланка.png"
+                alt="Общий вид проекта"
+              />
+              <figcaption>Место нахождения Электронного бланка</figcaption>
+            </div>
+            <p>Открыв бланк, нам стоит его заполнить, в соответствии с приказами ОРД, как ответ на поручение. Здесь важно - не затронуть в процессе заполнения закладки: <strong>[РЕГ НОМЕР И ДАТА ДОКУМЕНТА], [ДОЛЖНОСТЬ ПОДПИСАНТА 1], [ШТАМП ЭП ПОДПИСАНТА 1], [ФИО ПОДПИСАНТА 1], [ИСПОЛНИТЕЛЬ]</strong> - эти закладки система сама подставит</p>
+
+            <div class="image">
+              <img
+                id="image_id"
+                class="image_src"
+                src="/images/подготовленный_бланк.png"
+                alt="Подготовленный электронный бланк"
+              />
+              <figcaption>Заполненный электронный бланк</figcaption>
+            </div>
+            <p>Сохраняем себе на компьютер заполненный электронный бланк в формате .docx</p>
+          </div>
+
           <div class="admonition error">
-            <div class="admonition-title">Важно</div>
-            <p>
-              Не храните секреты в репозитории — используйте переменные
-              окружения.
-            </p>
+            <div class="admonition-title">Предупреждение</div>
+            <p>Удаление закладок повлечет за собой ошибки в дальнейшей работе внутри ЕСЭД</p>
           </div>
 
           <div class="article">
-            <h3 id="trash">Шаг 5. IMG</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
-              non ab quasi numquam cumque. Esse eos deleniti quasi quaerat vero
-              incidunt magni quas vitae? Molestias laudantium tenetur voluptates
-              quis pariatur.
-            </p>
-            <div class="image">
-              <img
-                id="image_id"
-                class="image_src"
-                src="/images/img1.png"
-                alt="Общий вид проекта"
-              />
-              <figcaption>Рисунок Х</figcaption>
+            <h3 id="step4">Шаг 4. Делаем связку</h3>
+            <p>Внутри окна проекта поручения по которому отчитываемся - необходимо нажать <strong>Регистрировать связанный проект копию</strong> - таким образом, мы создаем новый пустой проект документа уже связанный с документом поручения</p>
+            <div class="figure_video">
+              <video
+                id="video_player"
+                class="video_player"
+                autoplay
+                loop
+                muted
+                playsinline
+                width="940"
+              >
+                <source src="/images/step4.mp4" type="video/mp4" />
+                Ваш браузер не поддерживает видео.
+              </video>
             </div>
 
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
-              non ab quasi numquam cumque. Esse eos deleniti quasi quaerat vero
-              incidunt magni quas vitae? Molestias laudantium tenetur voluptates
-              quis pariatur.
-            </p>
-
-            <div class="image">
-              <img
-                id="image_id"
-                class="image_src"
-                src="/images/bmg.png"
-                alt="Общий вид проекта"
-              />
-              <figcaption>Рисунок Х</figcaption>
-            </div>
+            <figcaption>Создание связанного проекта документа</figcaption>
           </div>
+                    <div class="admonition tip">
+            <div class="admonition-title">Заметка</div>
+            <p>Минздрав требует, чтобы все отчеты были связаны с их поручениями</p>
+          </div>
+
+            <div class="article">
+            <h3 id="step5">Шаг 5. Заполняем связанный проект документа</h3>
+            <p><strong>Добавьте файл электронного бланка (сделанный вами на Шаге 3.) и задайте ему тип: основной</strong> если у Вас есть приложения, добавьте соответствующие файлы и задайте им тип: приложение</p>
+            <p><strong>Отправьте на подписание главному врачу</strong> нажимайте "Направить на подписание"!</p>
+            <p><strong>Задайте адресата</strong>, принято отправлять на официальные ящики органам власти</p>
+              <p>Таким образом, мы отправили проект документа на подписание главному врачу</p>
+            <div class="figure_video">
+              <video
+                id="video_player"
+                class="video_player"
+                autoplay
+                loop
+                muted
+                playsinline
+                width="940"
+              >
+                <source src="/images/step5.mp4" type="video/mp4" />
+                Ваш браузер не поддерживает видео.
+              </video>
+            </div>
+            <figcaption>Заполнение проекта документа</figcaption>
+          </div>
+            <div class="admonition tip">
+            <div class="admonition-title">Заметка</div>
+            <p>в ЭДО принято отправять все письма на Официальные ящики. За "официальными ящиками" обычно сидит секретарь.</p>
+          </div>
+
+           <div class="article">
+            <h3 id="step6">Шаг 6. Отслеживаем статус</h3>
+            <p>После создания проекта, чтобы отследить статус необходимо перейти на главную страницу системы и перейти в блок <strong>Мои проекты документов</strong> </p>
+            <div class="figure_video">
+              <video
+                id="video_player"
+                class="video_player"
+                autoplay
+                loop
+                muted
+                playsinline
+                width="940"
+              >
+                <source src="/images/step6.mp4" type="video/mp4" />
+                Отслеживаем состояние созданных проектов
+              </video>
+            </div>
+            <figcaption>Отслеживаем состояние созданных проектов</figcaption>
+          </div>
+
+                              <div class="admonition warn">
+            <div class="admonition-title">Заметка</div>
+            <p>На этом этапе, вы можете позвонить главному врачу и уведомить о подписи</p>
+          </div>
+
+            <div class="article">
+            <h3 id="step7">Шаг 7. Направляем секретарю</h3>
+            <p>После того как вы увидите состояние <strong>Подписан</strong> - это означает, что главный врач успешно подписал ваш проект</p>
+            <p>Нам остается лишь <strong>Направить на регистрацию</strong> секретарю</p>
+            <div class="figure_video">
+              <video
+                id="video_player"
+                class="video_player"
+                autoplay
+                loop
+                muted
+                playsinline
+                width="940"
+              >
+                <source src="/images/step7.mp4" type="video/mp4" />
+                Направляем секретарю
+              </video>
+            </div>
+            <figcaption>Направляем проект секретарю</figcaption>
+          </div>
+
+                      <div class="admonition tip">
+            <div class="admonition-title">Финал</div>
+            <p>Дальше ваш проект уходит секретарю, от Вас мало что зависит. Вы успешно отчитались!</p>
+          </div>
+
+
+         <div class="article">
+            <h2>Направление письма</h2>
+            <p>Если мы хотим, отправить новое письмо кому-либо. Нам необходимо создать новый пустой проект документа.</p>
+
+            <figcaption>Далее снизу идет пошаговое объяснение как написать письмо</figcaption>
+          </div>
+
+              <div class="admonition warn">
+            <div class="admonition-title">Примечание</div>
+            <p>Проект документа подразумвает под собой электронную подпись руководителя</p>
+          </div>
+
+            <div class="article">
+            <h3 id="side_step1">Шаг 1. Регистрируем новый проект документа</h3>
+            <p>Для того чтобы отправить письмо нам уже не нужно делать связку, как в случае с когда мы отчитываемся по поручению. Мы просто на главной странице жмем <strong>Регистрировать новый проект документа</strong></p>
+            <div class="figure_video">
+              <video
+                id="video_player"
+                class="video_player"
+                autoplay
+                loop
+                muted
+                playsinline
+                width="940"
+              >
+                <source src="/images/side_step1.mp4" type="video/mp4" />
+                Регистрируем новый проект документа
+              </video>
+            </div>
+            <figcaption>Регистрируем новый проект документа</figcaption>
+
+          </div>
+
+            <div class="admonition tip">
+            <div id="side_step2" class="admonition-title">Далее</div>
+            <p>Повторяем шаги 3-7 из "Как отчитаться"</p>
+          </div>
+
         </div>
       </main>
     </div>
